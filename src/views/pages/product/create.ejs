@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../../partials/head') %>
+  </head>
+  <body>
+    <%- include ('../../partials/nav') %>
+    <section class="my-5">
+      <div class="container">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h2 class="card-title">Create New Product</h2>
+              <a class="btn btn-secondary" href="/product">Back to Products</a>
+            </div>
+            <% if (message) { %>
+            <div class="alert alert-danger m-3">
+              <pre style="color: red"><%= message %></pre>
+            </div>
+            <% } %>
+            <div class="card-body">
+              <form action="/product" method="POST">
+                <div class="form-group">
+                  <label for="code">Product Code:</label>
+                  <input type="text" class="form-control" id="code" name="code" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Product Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="category">Category:</label>
+                  <input type="text" class="form-control" id="category" name="category" required>
+                </div>
+                <div class="form-group">
+                  <label for="brand">Brand:</label>
+                  <input type="text" class="form-control" id="brand" name="brand" required>
+                </div>
+                <div class="form-group">
+                  <label for="type">Type:</label>
+                  <input type="text" class="form-control" id="type" name="type">
+                </div>
+                <div class="form-group">
+                  <label for="description">Description:</label>
+                  <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary">Create Product</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+      </div>
+    </section>
+    <%- include ('../../partials/footer') %>
+    <script>
+      $(document).ready(function () {
+        $('#mnuProduct').addClass('active');
+      });
+    </script>
+  </body>
+</html>

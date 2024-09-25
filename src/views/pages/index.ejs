@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include ('../partials/head') %>
+</head>
+<body>
+<%- include ('../partials/nav') %>
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <% if (name) { %>
+                    <h1 class="header">Welcome, <%= name %>!</h1>
+                <% } else { %>
+                    <h1 class="header">Welcome to Our Site</h1>
+                <% } %>
+                <div class="center-align">
+                    <a href="/product">
+                        <img src="/img/delivery-box-carton.png" style="width: 25%; height: auto; background-color: white;" title="Products Listing" alt="Products"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include ('../partials/footer') %>
+<script>
+$(document).ready(function () {
+    $('#mnuHome').addClass('active');
+});
+</script>
+</body>
+</html>

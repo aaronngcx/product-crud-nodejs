@@ -1,0 +1,11 @@
+{
+    "esversion": 6,
+    "node": true,
+    "browser": true,
+    "globals": {
+        "$": false
+    },
+    "-W069": false,
+    "-W083": false,
+    "-W014": false
+}
